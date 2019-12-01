@@ -17,36 +17,32 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhA-WV-WPV" customClass="RangeSlider" customModule="MMRangeSlider" customModuleProvider="target">
                                 <rect key="frame" x="40" y="74" width="334" height="60"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2bd-Kf-4Bx"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackBackground">
-                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="from">
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackTint">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="to">
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-Sc-4Mu">
-                                <rect key="frame" x="18" y="413" width="378" height="81"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="nBG-Qn-Ihc">
+                                <rect key="frame" x="18" y="403" width="378" height="101"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="pEm-9X-fU8"/>
+                                    <constraint firstAttribute="height" constant="100" id="OMk-0N-HKy"/>
                                 </constraints>
-                                <color key="minimumTrackTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="thumbTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nBG-Qn-Ihc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0qa-8p-eiR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QhA-WV-WPV" secondAttribute="trailing" constant="40" id="4sT-Bs-VX4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Ls-Sc-4Mu" secondAttribute="trailing" constant="20" id="9ml-f8-Lxl"/>
+                            <constraint firstItem="nBG-Qn-Ihc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5c7-B3-8q4"/>
                             <constraint firstItem="QhA-WV-WPV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="U0n-Vw-YKw"/>
-                            <constraint firstItem="4Ls-Sc-4Mu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kWL-xm-ADZ"/>
-                            <constraint firstItem="4Ls-Sc-4Mu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pqS-L0-pmp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nBG-Qn-Ihc" secondAttribute="trailing" constant="20" id="eTc-RR-Qhd"/>
                             <constraint firstItem="QhA-WV-WPV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="udh-RA-UhE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

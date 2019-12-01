@@ -14,6 +14,7 @@
 		66677F062394026C00D247F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66677F052394026C00D247F9 /* Assets.xcassets */; };
 		66677F092394026C00D247F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66677F072394026C00D247F9 /* LaunchScreen.storyboard */; };
 		66677F122394033A00D247F9 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66677F112394033A00D247F9 /* RangeSlider.swift */; };
+		66677F19239441DD00D247F9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66677F18239441DD00D247F9 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		66677F082394026C00D247F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66677F0A2394026C00D247F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66677F112394033A00D247F9 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		66677F18239441DD00D247F9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +76,17 @@
 			isa = PBXGroup;
 			children = (
 				66677F112394033A00D247F9 /* RangeSlider.swift */,
+				66677F17239441CF00D247F9 /* Extensions */,
 			);
 			path = Slider;
+			sourceTree = "<group>";
+		};
+		66677F17239441CF00D247F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66677F18239441DD00D247F9 /* UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66677F19239441DD00D247F9 /* UIView.swift in Sources */,
 				66677F122394033A00D247F9 /* RangeSlider.swift in Sources */,
 				66677F012394026A00D247F9 /* ViewController.swift in Sources */,
 				66677EFD2394026A00D247F9 /* AppDelegate.swift in Sources */,
