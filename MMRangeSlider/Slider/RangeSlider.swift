@@ -8,8 +8,28 @@
 
 import UIKit
 
-final class RangeSlider: UIView {
+@IBDesignable final class RangeSlider: UIView {
     
+    // MARK: - Parameters. Track
+    @IBInspectable var trackBackground: UIColor = .black {
+        didSet {
+            backLine.backgroundColor = trackBackground
+        }
+    }
+    
+    @IBInspectable var trackTint: UIColor = .brown {
+        didSet {
+            line.backgroundColor = trackTint
+        }
+    }
+    
+    var trackCorners: Corners = .rounded(.full) {
+        didSet {
+            updateLinesCorners()
+        }
+    }
+    
+    // MARK: - Subviews. Track
     private var backLine: UIView!
     private var line: UIView!
     
@@ -32,12 +52,22 @@ final class RangeSlider: UIView {
     }
 }
 
+extension RangeSlider {
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        
+        positionSubviews()
+    }
+}
+
 // MARK: - Subviews frame
 private extension RangeSlider {
     
     func positionSubviews() {
         updateBackLineFrame()
         updateLineFrame()
+        updateLinesCorners()
     }
     
     func updateBackLineFrame() {
@@ -51,7 +81,28 @@ private extension RangeSlider {
     
     func updateLineFrame() {
         #warning("todo")
-        line.frame = CGRect(x: backLine.frame.minX, y: backLine.frame.minY, width: backLine.frame.width / 2, height: backLine.frame.height)
+        line.frame = CGRect(
+            x: backLine.frame.minX, y: backLine.frame.minY,
+            width: backLine.frame.width / 2,
+            height: backLine.frame.height
+        )
+    }
+    
+    func updateLinesCorners() {
+        switch trackCorners {
+        case .withoutRounding:
+            backLine.layer.cornerRadius = 0
+            line.layer.cornerRadius = 0
+        case let .rounded(rounding):
+            switch rounding {
+            case .full:
+                backLine.layer.cornerRadius = backLine.frame.height / 2
+                line.layer.cornerRadius = line.frame.height / 2
+            case let .value(radius):
+                backLine.layer.cornerRadius = radius
+                line.layer.cornerRadius = radius
+            }
+        }
     }
 }
 
@@ -65,13 +116,27 @@ private extension RangeSlider {
     
     func createBackLine() {
         backLine = UIView(frame: .zero)
-        backLine.backgroundColor = .black
+        backLine.backgroundColor = trackBackground
         addSubview(backLine)
     }
     
     func createLine() {
         line = UIView(frame: .zero)
-        line.backgroundColor = .brown
+        line.backgroundColor = trackTint
         addSubview(line)
+    }
+}
+
+// MARK: - Model
+extension RangeSlider {
+    
+    enum Corners {
+        case rounded(Rounding)
+        case withoutRounding
+        
+        enum Rounding {
+            case full
+            case value(CGFloat)
+        }
     }
 }
