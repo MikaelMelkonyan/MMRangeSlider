@@ -13,6 +13,7 @@
 		66677F042394026A00D247F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66677F022394026A00D247F9 /* Main.storyboard */; };
 		66677F062394026C00D247F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66677F052394026C00D247F9 /* Assets.xcassets */; };
 		66677F092394026C00D247F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66677F072394026C00D247F9 /* LaunchScreen.storyboard */; };
+		66677F122394033A00D247F9 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66677F112394033A00D247F9 /* RangeSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		66677F052394026C00D247F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66677F082394026C00D247F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66677F0A2394026C00D247F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66677F112394033A00D247F9 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,17 @@
 				66677F052394026C00D247F9 /* Assets.xcassets */,
 				66677F072394026C00D247F9 /* LaunchScreen.storyboard */,
 				66677F0A2394026C00D247F9 /* Info.plist */,
+				66677F102394031E00D247F9 /* Slider */,
 			);
 			path = MMRangeSlider;
+			sourceTree = "<group>";
+		};
+		66677F102394031E00D247F9 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				66677F112394033A00D247F9 /* RangeSlider.swift */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66677F122394033A00D247F9 /* RangeSlider.swift in Sources */,
 				66677F012394026A00D247F9 /* ViewController.swift in Sources */,
 				66677EFD2394026A00D247F9 /* AppDelegate.swift in Sources */,
 				66677EFF2394026A00D247F9 /* SceneDelegate.swift in Sources */,
